@@ -10,12 +10,12 @@ class Book extends Component {
                     <img className="book-cover" src={props.image} alt={`${props.title}`}></img>
                 </div>
                 <div className="book-box col s10">
-                    <h4>{props.title}</h4>
-                    <p>{props.isbn}</p>
+                    <h4 className="underline">{props.title}</h4>
+                    <p>ISBN: {props.isbn}</p>
                     <h5>by {props.authors}</h5>
 
                     <p><span className="bold">Description:</span> {props.description}</p>
-                    <a href={props.link} target="_blank" rel="noopener noreferrer">Find on Amazon</a>
+                    <a href={props.link} target="_blank" rel="noopener noreferrer">Find on Google Books</a>
 
                 </div>
             </div>
