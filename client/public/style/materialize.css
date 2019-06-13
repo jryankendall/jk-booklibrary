@@ -8091,5 +8091,8 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+.book-row {
+  border-top: solid black 1px;
+}
 
 /*# sourceMappingURL=materialize.css.map */

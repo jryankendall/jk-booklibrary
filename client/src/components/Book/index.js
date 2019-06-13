@@ -5,11 +5,11 @@ class Book extends Component {
     render() {
         let props = this.props;
         return(
-            <div className="row book-row">
-                <div className="book-cover-box col s2">
+            <div className="row book-row" key={props.index}>
+                <div className="book-cover-box col s3">
                     <img className="book-cover" src={props.image} alt={`${props.title}`}></img>
                 </div>
-                <div className="book-box col s10">
+                <div className="book-box col s9">
                     <h4 className="underline">{props.title}</h4>
                     <p>ISBN: {props.isbn}</p>
                     <h5>by {props.authors}</h5>

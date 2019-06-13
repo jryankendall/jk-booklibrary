@@ -1,4 +1,8 @@
 import axios from 'axios';
+require("dotenv").config();
+
+var API_KEY = process.env.REACT_APP_API_KEY;
+
 
 export default {
     get: {
@@ -15,6 +19,15 @@ export default {
     add: {
         one: (book) => {
             return axios.post("/api/books", book);
+        }
+    },
+
+    google: {
+        one: (bookObject) => {
+            let searchTerm = bookObject.data.title.replace(/ /g, "+");
+            return axios.get(`volumes?q=${searchTerm}&key=${API_KEY}`, {
+                baseURL: "https://www.googleapis.com/books/v1/"
+            })
         }
     }
 }
