@@ -54,7 +54,7 @@ class Search extends Component {
                         authors: foundBook.volumeInfo.authors,
                         link: foundBook.volumeInfo.infoLink,
                         description: foundBook.volumeInfo.description,
-                        image: foundBook.volumeInfo.imageLinks.smallThumbnail,
+                        image: foundBook.volumeInfo.imageLinks.smallThumbnail || "",
                         isbn: foundBook.volumeInfo.industryIdentifiers[0].identifier || ""
                     };
                     booksState.push(newBook);
